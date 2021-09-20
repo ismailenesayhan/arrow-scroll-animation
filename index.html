@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .page-hero__scroll {
+        top: 50px;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 0;
+      }
+      .page-hero__scroll-wrapper {
+        display: inline-block;
+        margin-top: 28px;
+        text-align: center;
+        overflow: hidden;
+      }
+      .page-hero__scroll-wrapper:hover {
+        cursor: pointer;
+      }
+      .page-hero__scroll-wrapper span {
+        font-family: Ginto, helvetica, "sans-serif";
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.75;
+      }
+      .page-hero__scroll-arrow {
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+        transform-origin: 50% 50%;
+        -webkit-animation: downarrow 2.3s ease-out infinite;
+        animation: downarrow 2.3s ease-out infinite;
+      }
+      @-webkit-keyframes downarrow {
+        0% {
+          -webkit-transform: translateY(-50px);
+          opacity: 0.5;
+        }
+        to {
+          -webkit-transform: translateY(100px);
+          opacity: 1;
+        }
+      }
+
+      @keyframes downarrow {
+        0% {
+          -webkit-transform: translateY(-50px);
+          opacity: 0.5;
+        }
+        to {
+          -webkit-transform: translateY(100px);
+          opacity: 1;
+        }
+      }
+      .page-hero__scroll-arrow span {
+        display: inline-block;
+      }
+      @media only screen and (max-width: 375px) {
+        .page-hero__scroll {
+          bottom: 50px;
+        }
+      }
+      @media only screen and (min-width: 1280px) {
+        .page-hero__scroll {
+          bottom: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body style="background-color: black">
+    <div class="page-hero__scroll">
+      <div class="page-hero__scroll-wrapper">
+        <div class="page-hero__scroll-arrow">
+          <span>
+            <img src="arrow-down-animation.svg"/>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
